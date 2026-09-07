@@ -1,0 +1,1320 @@
+/* ==========================================
+   RAGHAV PANDIT PORTFOLIO V2
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#05070d;
+    color:#fff;
+    overflow-x:hidden;
+}
+
+/* =========================
+LOADER
+========================= */
+
+#loader{
+    position:fixed;
+    inset:0;
+    background:#000;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    z-index:9999;
+}
+
+#loader h1{
+    font-size:55px;
+    letter-spacing:8px;
+}
+
+#loader p{
+    color:#8abfff;
+    margin-top:15px;
+}
+
+/* =========================
+BACKGROUND
+========================= */
+
+.background{
+    position:fixed;
+    inset:0;
+    overflow:hidden;
+    z-index:-10;
+}
+
+.forest{
+    position:absolute;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    filter:brightness(.35);
+}
+
+.fog{
+    position:absolute;
+    width:180%;
+    left:-40%;
+    opacity:.18;
+    pointer-events:none;
+}
+
+.fog1{
+    bottom:-5%;
+    animation:fogMove 40s linear infinite;
+}
+
+.fog2{
+    bottom:20%;
+    animation:fogMove2 55s linear infinite;
+}
+
+@keyframes fogMove{
+
+0%{
+
+transform:translateX(-5%);
+
+}
+
+100%{
+
+transform:translateX(10%);
+
+}
+
+}
+
+@keyframes fogMove2{
+
+0%{
+
+transform:translateX(8%);
+
+}
+
+100%{
+
+transform:translateX(-8%);
+
+}
+
+}
+
+.blue-light{
+
+position:absolute;
+
+width:700px;
+
+height:700px;
+
+background:radial-gradient(circle,
+
+rgba(0,160,255,.35),
+
+transparent 70%);
+
+left:50%;
+
+top:-250px;
+
+transform:translateX(-50%);
+
+filter:blur(120px);
+
+}
+
+/* =========================
+NAVBAR
+========================= */
+
+header{
+
+position:fixed;
+
+top:0;
+
+width:100%;
+
+padding:22px 8%;
+
+z-index:100;
+
+backdrop-filter:blur(18px);
+
+background:rgba(0,0,0,.25);
+
+}
+
+nav{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+}
+
+.logo{
+
+font-size:34px;
+
+font-weight:800;
+
+color:#47b9ff;
+
+}
+
+nav ul{
+
+display:flex;
+
+gap:40px;
+
+list-style:none;
+
+}
+
+nav a{
+
+color:white;
+
+text-decoration:none;
+
+transition:.3s;
+
+}
+
+nav a:hover{
+
+color:#47b9ff;
+
+}
+
+/* =========================
+HERO
+========================= */
+
+.hero{
+
+min-height:100vh;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:140px 8% 80px;
+
+}
+
+.hero-left{
+
+width:50%;
+
+}
+
+.tag{
+
+display:inline-block;
+
+padding:10px 18px;
+
+background:rgba(255,255,255,.08);
+
+border:1px solid rgba(255,255,255,.1);
+
+border-radius:50px;
+
+margin-bottom:20px;
+
+}
+
+.hero-left h1{
+
+font-size:75px;
+
+font-weight:900;
+
+line-height:1.05;
+
+margin-bottom:15px;
+
+}
+
+.hero-left h2{
+
+font-size:34px;
+
+color:#47b9ff;
+
+margin-bottom:20px;
+
+}
+
+.hero-left p{
+
+font-size:18px;
+
+line-height:1.8;
+
+max-width:600px;
+
+color:#ddd;
+
+margin-bottom:35px;
+
+}
+
+.hero-buttons{
+
+display:flex;
+
+gap:20px;
+
+}
+
+.btn,
+
+.btn-outline{
+
+padding:15px 35px;
+
+border-radius:50px;
+
+text-decoration:none;
+
+font-weight:600;
+
+transition:.3s;
+
+}
+
+.btn{
+
+background:#47b9ff;
+
+color:#000;
+
+}
+
+.btn:hover{
+
+transform:translateY(-5px);
+
+box-shadow:0 0 30px #47b9ff;
+
+}
+
+.btn-outline{
+
+border:2px solid #47b9ff;
+
+color:#47b9ff;
+
+}
+
+.btn-outline:hover{
+
+background:#47b9ff;
+
+color:#000;
+
+}
+
+.hero-right{
+
+display:flex;
+
+justify-content:center;
+
+width:40%;
+
+}
+
+.profile-card{
+
+padding:15px;
+
+border-radius:25px;
+
+background:rgba(255,255,255,.06);
+
+backdrop-filter:blur(25px);
+
+border:1px solid rgba(255,255,255,.1);
+
+box-shadow:0 0 40px rgba(0,180,255,.25);
+
+}
+
+.profile-card img{
+
+width:380px;
+
+border-radius:18px;
+
+display:block;
+
+}
+
+/* =========================
+ABOUT
+========================= */
+
+section{
+
+    padding:120px 8%;
+
+    position:relative;
+
+    z-index:5;
+
+}
+
+section h2{
+
+    font-size:52px;
+
+    text-align:center;
+
+    margin-bottom:50px;
+
+    color:#47b9ff;
+
+    font-weight:800;
+
+}
+
+section p{
+
+    max-width:900px;
+
+    margin:auto;
+
+    text-align:center;
+
+    font-size:18px;
+
+    line-height:34px;
+
+    color:#d7d7d7;
+
+}
+
+/* =========================
+SKILLS
+========================= */
+
+.skills-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+gap:28px;
+
+margin-top:60px;
+
+}
+
+.skills-grid div{
+
+padding:28px;
+
+border-radius:20px;
+
+background:rgba(255,255,255,.06);
+
+border:1px solid rgba(255,255,255,.12);
+
+backdrop-filter:blur(18px);
+
+font-size:18px;
+
+font-weight:600;
+
+text-align:center;
+
+transition:.4s;
+
+cursor:pointer;
+
+}
+
+.skills-grid div:hover{
+
+transform:translateY(-12px) scale(1.05);
+
+background:rgba(71,185,255,.15);
+
+border-color:#47b9ff;
+
+box-shadow:
+
+0 0 25px rgba(71,185,255,.35);
+
+}
+
+/* =========================
+PROJECTS
+========================= */
+
+.project-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+gap:35px;
+
+margin-top:60px;
+
+}
+
+.project-card{
+
+padding:40px;
+
+border-radius:25px;
+
+background:rgba(255,255,255,.06);
+
+backdrop-filter:blur(20px);
+
+border:1px solid rgba(255,255,255,.1);
+
+transition:.5s;
+
+overflow:hidden;
+
+position:relative;
+
+}
+
+.project-card::before{
+
+content:"";
+
+position:absolute;
+
+top:-120px;
+
+left:-80px;
+
+width:220px;
+
+height:220px;
+
+background:
+
+radial-gradient(circle,
+
+rgba(71,185,255,.45),
+
+transparent);
+
+transition:.6s;
+
+}
+
+.project-card:hover::before{
+
+transform:scale(1.6);
+
+}
+
+.project-card:hover{
+
+transform:translateY(-12px);
+
+border-color:#47b9ff;
+
+box-shadow:
+
+0 0 35px rgba(71,185,255,.25);
+
+}
+
+.project-card h3{
+
+font-size:28px;
+
+margin-bottom:20px;
+
+color:#47b9ff;
+
+}
+
+.project-card p{
+
+text-align:left;
+
+line-height:30px;
+
+font-size:16px;
+
+color:#d0d0d0;
+
+}
+
+/* =========================
+SECTION ANIMATION
+========================= */
+
+section{
+
+animation:fadeUp 1.2s ease;
+
+}
+
+@keyframes fadeUp{
+
+0%{
+
+opacity:0;
+
+transform:translateY(60px);
+
+}
+
+100%{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+/* =========================
+CONTACT
+========================= */
+
+#contact{
+
+text-align:center;
+
+}
+
+.contact-text{
+
+font-size:20px;
+
+margin-bottom:50px;
+
+color:#dcdcdc;
+
+}
+
+.contact-box{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:30px;
+
+margin:50px auto;
+
+max-width:900px;
+
+}
+
+.contact-box div{
+
+background:rgba(255,255,255,.06);
+
+backdrop-filter:blur(18px);
+
+border:1px solid rgba(255,255,255,.12);
+
+padding:35px;
+
+border-radius:22px;
+
+transition:.4s;
+
+}
+
+.contact-box div:hover{
+
+transform:translateY(-10px);
+
+border-color:#47b9ff;
+
+box-shadow:0 0 30px rgba(71,185,255,.35);
+
+}
+
+.contact-box h3{
+
+font-size:26px;
+
+margin-bottom:15px;
+
+color:#47b9ff;
+
+}
+
+.contact-box p{
+
+font-size:18px;
+
+color:#d8d8d8;
+
+line-height:30px;
+
+}
+
+/* =========================
+SOCIAL LINKS
+========================= */
+
+.social-links{
+
+display:flex;
+
+justify-content:center;
+
+gap:25px;
+
+flex-wrap:wrap;
+
+margin-top:50px;
+
+}
+
+.social-links a{
+
+display:flex;
+
+align-items:center;
+
+gap:10px;
+
+padding:16px 30px;
+
+border-radius:50px;
+
+text-decoration:none;
+
+font-weight:600;
+
+background:rgba(255,255,255,.08);
+
+color:white;
+
+border:1px solid rgba(255,255,255,.1);
+
+transition:.35s;
+
+backdrop-filter:blur(15px);
+
+}
+
+.social-links a i{
+
+font-size:24px;
+
+}
+
+.social-links a:hover{
+
+background:#47b9ff;
+
+color:black;
+
+transform:translateY(-6px);
+
+box-shadow:0 0 25px #47b9ff;
+
+}
+
+/* =========================
+FLOATING WHATSAPP
+========================= */
+
+.floating-whatsapp{
+
+position:fixed;
+
+right:25px;
+
+bottom:30px;
+
+width:65px;
+
+height:65px;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+border-radius:50%;
+
+background:#25D366;
+
+color:white;
+
+font-size:34px;
+
+text-decoration:none;
+
+box-shadow:0 0 25px rgba(37,211,102,.5);
+
+z-index:999;
+
+transition:.35s;
+
+}
+
+.floating-whatsapp:hover{
+
+transform:scale(1.12);
+
+}
+
+/* =========================
+MUSIC BUTTON
+========================= */
+
+#musicBtn{
+
+position:fixed;
+
+left:25px;
+
+bottom:30px;
+
+width:60px;
+
+height:60px;
+
+border:none;
+
+border-radius:50%;
+
+background:#47b9ff;
+
+color:#000;
+
+font-size:24px;
+
+cursor:pointer;
+
+z-index:999;
+
+transition:.3s;
+
+}
+
+#musicBtn:hover{
+
+transform:rotate(180deg);
+
+}
+
+/* =========================
+FOOTER
+========================= */
+
+footer{
+
+padding:60px 20px;
+
+text-align:center;
+
+background:rgba(0,0,0,.45);
+
+border-top:1px solid rgba(255,255,255,.08);
+
+margin-top:100px;
+
+}
+
+footer h3{
+
+font-size:34px;
+
+margin-bottom:10px;
+
+color:#47b9ff;
+
+}
+
+footer p{
+
+margin-bottom:12px;
+
+color:#cfcfcf;
+
+}
+
+footer small{
+
+color:#888;
+
+}
+
+/* =========================
+SCROLL PROGRESS
+========================= */
+
+#progressBar{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+height:4px;
+
+width:0%;
+
+background:#47b9ff;
+
+z-index:99999;
+
+box-shadow:0 0 15px #47b9ff;
+
+}
+
+/* =====================================
+   RESPONSIVE DESIGN
+===================================== */
+
+@media (max-width:1100px){
+
+.hero{
+
+flex-direction:column-reverse;
+
+text-align:center;
+
+padding-top:150px;
+
+}
+
+.hero-left{
+
+width:100%;
+
+}
+
+.hero-right{
+
+width:100%;
+
+margin-bottom:50px;
+
+}
+
+.hero-left p{
+
+margin:auto;
+
+}
+
+.hero-buttons{
+
+justify-content:center;
+
+}
+
+.profile-card img{
+
+width:320px;
+
+}
+
+nav{
+
+flex-direction:column;
+
+gap:20px;
+
+}
+
+nav ul{
+
+gap:20px;
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+}
+
+}
+
+/* Mobile */
+
+@media (max-width:768px){
+
+.hero-left h1{
+
+font-size:48px;
+
+}
+
+.hero-left h2{
+
+font-size:24px;
+
+}
+
+.hero-left p{
+
+font-size:16px;
+
+line-height:28px;
+
+}
+
+section{
+
+padding:80px 25px;
+
+}
+
+section h2{
+
+font-size:38px;
+
+}
+
+.profile-card img{
+
+width:260px;
+
+}
+
+.logo{
+
+font-size:28px;
+
+}
+
+nav a{
+
+font-size:15px;
+
+}
+
+.contact-box{
+
+grid-template-columns:1fr;
+
+}
+
+.project-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.skills-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.social-links{
+
+flex-direction:column;
+
+align-items:center;
+
+}
+
+.social-links a{
+
+width:250px;
+
+justify-content:center;
+
+}
+
+}
+
+/* Small Mobile */
+
+@media(max-width:480px){
+
+.hero-left h1{
+
+font-size:38px;
+
+}
+
+.hero-left h2{
+
+font-size:20px;
+
+}
+
+.skills-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.profile-card img{
+
+width:220px;
+
+}
+
+.hero-buttons{
+
+flex-direction:column;
+
+}
+
+.btn,
+
+.btn-outline{
+
+width:100%;
+
+text-align:center;
+
+}
+
+}
+
+/* ==========================
+PROFILE FLOAT
+========================== */
+
+.profile-card{
+
+animation:floatProfile 6s ease-in-out infinite;
+
+}
+
+@keyframes floatProfile{
+
+0%{
+
+transform:translateY(0px);
+
+}
+
+50%{
+
+transform:translateY(-18px);
+
+}
+
+100%{
+
+transform:translateY(0px);
+
+}
+
+}
+
+/* ==========================
+BUTTON GLOW
+========================== */
+
+.btn,
+.btn-outline,
+.social-links a{
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.btn::before,
+.btn-outline::before,
+.social-links a::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+
+left:-120%;
+
+width:100%;
+
+height:100%;
+
+background:linear-gradient(
+
+90deg,
+
+transparent,
+
+rgba(255,255,255,.4),
+
+transparent
+
+);
+
+transition:.8s;
+
+}
+
+.btn:hover::before,
+.btn-outline:hover::before,
+.social-links a:hover::before{
+
+left:120%;
+
+}
+
+/* ==========================
+SCROLLBAR
+========================== */
+
+::-webkit-scrollbar{
+
+width:10px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:#47b9ff;
+
+border-radius:20px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:#0a0f17;
+
+}
+
+/* ==========================
+TEXT SELECTION
+========================== */
+
+::selection{
+
+background:#47b9ff;
+
+color:#000;
+
+}
+
+/* ==========================
+SMOOTH FADE
+========================== */
+
+.hero,
+section,
+footer{
+
+animation:fadeSmooth 1.2s ease;
+
+}
+
+@keyframes fadeSmooth{
+
+0%{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+100%{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+/* ===========================
+PARTICLES
+=========================== */
+
+#particles{
+
+position:absolute;
+
+inset:0;
+
+overflow:hidden;
+
+pointer-events:none;
+
+}
+
+.particle{
+
+position:absolute;
+
+width:4px;
+
+height:4px;
+
+border-radius:50%;
+
+background:#7fdcff;
+
+box-shadow:0 0 12px #7fdcff;
+
+animation:particleFloat linear infinite;
+
+opacity:.8;
+
+}
+
+@keyframes particleFloat{
+
+0%{
+
+transform:translateY(0);
+
+opacity:0;
+
+}
+
+20%{
+
+opacity:1;
+
+}
+
+100%{
+
+transform:translateY(-180px);
+
+opacity:0;
+
+}
+
+}
