@@ -182,29 +182,29 @@ document.addEventListener("mousemove",(e)=>{
 // SCROLL REVEAL
 // =====================================
 
-// const revealItems=document.querySelectorAll(
-// "section,.project-card,.skills-grid div,.contact-box div"
-// );
+const revealItems=document.querySelectorAll(
+"section,.project-card,.skills-grid div,.contact-box div"
+);
 
-// function reveal(){
+function reveal(){
 
-//     const trigger=window.innerHeight*0.85;
+    const trigger=window.innerHeight*0.85;
 
-//     revealItems.forEach(item=>{
+    revealItems.forEach(item=>{
 
-//         const top=item.getBoundingClientRect().top;
+        const top=item.getBoundingClientRect().top;
 
-//         if(top<trigger){
+        if(top<trigger){
 
-//             item.style.opacity="1";
+            item.style.opacity="1";
 
-//             item.style.transform="translateY(0px)";
+            item.style.transform="translateY(0px)";
 
-//         }
+        }
 
-//     });
+    });
 
-// }
+}
 
 revealItems.forEach(item=>{
 

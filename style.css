@@ -420,56 +420,6 @@ section p {
 /* =========================
 SKILLS
 ========================= */
-/* 
-.skills-grid{
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-
-gap:28px;
-
-margin-top:60px;
-
-}
-
-.skills-grid div{
-
-padding:28px;
-
-border-radius:20px;
-
-background:rgba(255,255,255,.06);
-
-border:1px solid rgba(255,255,255,.12);
-
-backdrop-filter:blur(18px);
-
-font-size:18px;
-
-font-weight:600;
-
-text-align:center;
-
-transition:.4s;
-
-cursor:pointer;
-
-}
-
-.skills-grid div:hover{
-
-transform:translateY(-12px) scale(1.05);
-
-background:rgba(71,185,255,.15);
-
-border-color:#47b9ff;
-
-box-shadow:
-
-0 0 25px rgba(71,185,255,.35);
-
-} */
 
 
 
@@ -479,12 +429,18 @@ box-shadow:
     gap: 2vw;
     padding-bottom: 18px;
 
-    
 
 }
 
 .category-title h3{
     font-size: 30px;
+}
+
+.category-title::after {
+    content: "";
+    height: 2px;
+    background: #47b9ff;
+    flex: 1;
 }
 
 .frontend-grid {
@@ -550,99 +506,62 @@ PROJECTS
 ========================= */
 
 .project-grid {
-
     display: grid;
-
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-
     gap: 35px;
-
     margin-top: 60px;
-
 }
 
 .project-card {
-
     padding: 40px;
-
     border-radius: 25px;
-
     background: rgba(255, 255, 255, .06);
-
     backdrop-filter: blur(20px);
-
     border: 1px solid rgba(255, 255, 255, .1);
-
     transition: .5s;
-
     overflow: hidden;
-
     position: relative;
 
 }
 
 .project-card::before {
-
     content: "";
-
     position: absolute;
-
     top: -120px;
-
     left: -80px;
-
     width: 220px;
-
     height: 220px;
-
     background:
-
         radial-gradient(circle,
-
             rgba(71, 185, 255, .45),
-
             transparent);
-
     transition: .6s;
 
 }
 
 .project-card:hover::before {
-
     transform: scale(1.6);
-
 }
 
 .project-card:hover {
-
     transform: translateY(-12px);
-
     border-color: #47b9ff;
-
     box-shadow:
-
         0 0 35px rgba(71, 185, 255, .25);
 
 }
 
 .project-card h3 {
-
     font-size: 28px;
-
     margin-bottom: 20px;
-
     color: #47b9ff;
 
 }
 
 .project-card p {
-
     text-align: left;
-
     line-height: 30px;
-
     font-size: 16px;
-
     color: #d0d0d0;
 
 }
@@ -1012,6 +931,7 @@ SCROLL PROGRESS
     .hero-buttons {
 
         justify-content: center;
+        margin-top: 20pxs;
 
     }
 
@@ -1162,6 +1082,7 @@ SCROLL PROGRESS
     .hero-buttons {
 
         flex-direction: column;
+        margin-top: 20px;
 
     }
 
@@ -1181,6 +1102,10 @@ SCROLL PROGRESS
 
     .category-title h3{
         font-size: 20px;
+    }
+
+    .project-card:nth-child(n + 6){
+        display: none;
     }
 
 }
